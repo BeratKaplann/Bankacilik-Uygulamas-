@@ -1,7 +1,0 @@
-=== Kullanıcı Kaydı ===
-Ad Soyad: Berat Kaplan
-TC Kimlik: 12345678910
-Telefon: 05555555555
-Şifre: 2534
-----------------------------
-Kullanıcı Kayıtları buraya depolanır
