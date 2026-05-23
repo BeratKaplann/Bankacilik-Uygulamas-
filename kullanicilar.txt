@@ -1,6 +1,6 @@
-=== YENİ KULLANICI KAYDI ===
+=== Kullanıcı Kaydı ===
 Ad Soyad: Berat Kaplan
-TC Kimlik: 10430697954
-Telefon: 05551537725
+TC Kimlik: 12345678910
+Telefon: 05555555555
 Şifre: 2534
 ----------------------------
