@@ -8,7 +8,20 @@ Uygulama, kullanıcı dostu şık tasarımı, dinamik karakter sayaçları ve ö
 
 ## 🚀 Öne Çıkan Özellikler
 
-* **🛡️ Gelişmiş Güvenlik ve Panik Modu:** Kullanıcı şifresinin tam tersi girildiğinde sistem otomatik olarak acil durum (bakım modu) protokolünü devreye sokar, işlemleri askıya alır ve `ERR_CONNECTION_REFUSED_503` uyarısıyla sistemi güvenli şekilde kapatır.
+## 🛡️ Acil Durum Siber Savunma Protokolü (Panik Modu)
+
+Bu projenin temel geliştirme amacı; fiziksel hırsızlık, gasp, tehdit veya siber saldırı (brute-force vb.) anlarında banka verilerini ve sistem bütünlüğünü korumaktır. 
+
+### 🚨 Senaryo ve Çalışma Mantığı:
+* **Fiziksel Tehdit / Gasp Anı:** Banka görevlisi veya kullanıcı, tehdit altında zorla sisteme giriş yapmaya zorlandığında, kendi normal şifresini girmek yerine **şifresinin tam tersini (Örn: 1453 yerine 3541)** girer.
+* **Siber Saldırı / Sızma Girişimi:** Otomatik botlar veya saldırganlar şifre kombinasyonlarını denerken ters şifre tetiklendiğinde sistem durumu anormal algılar.
+
+### ⚡ Sistem Tepkisi (Bakım Modu):
+Ters şifre girildiği an uygulama saldırganı veya hırsızı şüphelendirmeden şu adımları arka planda saniyeler içinde çalıştırır:
+1. Veritabanı bağlantılarını ve dosya okuma/yazma kanallarını anında bloke eder.
+2. Tüm bankacılık işlemlerini ve para akışını askıya alarak dondurur.
+3. Sistemi tamamen **Güvenli Bakım Modu**na geçirir.
+4. Ekrana gerçekçi bir `ERR_CONNECTION_REFUSED_503 (Sunucuya Bağlanılamadı)` hatası fırlatarak uygulamayı güvenli bir şekilde kapatır. Böylece hem fiziksel hırsızın sistemde işlem yapması engellenir hem de siber saldırganın sistem verilerine erişimi tamamen kesilir.
 * **🎨 Modern ve Şık Arayüz:** Koyu lacivert ve siyah geçişli (`GradientPaint`) şeffaf kart tasarımları, siber punk esintili neon detaylar ve akıcı buton animasyonları.
 * **⚡ Dinamik Kontroller (Canlı Sayaçlar):** TC Kimlik, Telefon, Şifre ve IBAN alanlarında veri girişini anlık olarak kısıtlayan ve karakter sayısını gösteren akıllı sayaç yapısı (`KeyAdapter`).
 * **💾 Dosya Tabanlı Veritabanı:** Kullanıcı kayıtları ve kimlik doğrulama işlemleri nesne yönelimli olarak `kullanicilar.txt` not defteri üzerinden satır satır taranarak işlenir.
